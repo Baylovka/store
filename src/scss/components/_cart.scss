@@ -1,0 +1,24 @@
+.cart {
+    position: relative;
+
+    // &__icon {}
+
+    &__count {
+        position: absolute;
+        top: 0;
+        right: -8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 12px;
+        height: 12px;
+        background-color: $color-primary-green;
+        border-radius: 50%;
+        box-sizing: content-box;
+        border: 3px $color-primary-white solid;
+        color: $color-primary-white;
+        font-family: "Cera Pro";
+        font-size: 10px;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,25 @@
+.link {
+    color: $color-primary-gray;
+    position: relative;
+    transition: font-weight .1s;
+
+    &:hover {
+        font-weight: 700;
+    }
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 3px;
+        background-color: $color-primary-green;
+        position: absolute;
+        bottom: -28px;
+        left: 50%;
+        transition: width .3s, left .3s;
+    }
+
+    &:hover::before {
+        width: 100%;
+        left: 0;
+    }
+}

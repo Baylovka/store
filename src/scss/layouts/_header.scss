@@ -1,2 +1,27 @@
 .header {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 26px 0 18px 0;
+        border-bottom: 0.3px rgba($color-primary-green, 0.5) solid;
+    }
+
+    // &__logo {}
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__utility-bar {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
 }

@@ -1,0 +1,18 @@
+.button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: $color-primary-green;
+    border-radius: 6px;
+    padding: 8px 26px;
+    border: none;
+    cursor: pointer;
+
+    color: $color-primary-white;
+    font-family: "Cera Pro";
+    font-size: 16px;
+    font-weight: 500;
+
+    fill: none;
+    stroke: $color-primary-white;
+}
