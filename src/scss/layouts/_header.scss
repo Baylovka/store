@@ -24,4 +24,10 @@
         align-items: center;
         gap: 30px;
     }
+
+    &__link {
+        &::before {
+            bottom: -28px;
+        }
+    }
 }

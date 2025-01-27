@@ -15,22 +15,22 @@ export default function Header() {
                     <nav className="header__nav">
                         <ul className="header__menu">
                             <li>
-                                <Link href={'/'} className="link">
+                                <Link href={'/'} className="link header__link">
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'/'} className="link">
+                                <Link href={'/'} className="link header__link">
                                     Shop
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'/'} className="link">
+                                <Link href={'/'} className="link header__link">
                                     Plant Care
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'/'} className="link">
+                                <Link href={'/'} className="link header__link">
                                     Blogs
                                 </Link>
                             </li>
