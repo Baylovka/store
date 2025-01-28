@@ -1,0 +1,90 @@
+.footer-top {
+    &__container {
+        padding: 30px 24px;
+        background-color: $color-secondary-white;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px 36px;
+    }
+
+    &__item {
+        flex: 1 1 200px;
+
+        &:last-child {
+            flex-basis: 324px;
+        }
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__image-container {
+        position: relative;
+        background-color: rgba($color-primary-green, 0.13);
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 2px;
+        right: -10px;
+    }
+
+    &__description {
+        color: $color-secondary-727272;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 158%;
+    }
+
+    &__form {
+        display: flex;
+        border-radius: 6px;
+        background: $color-primary-white;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+    }
+
+    &__input {
+        font-family: "Cera Pro";
+        font-size: 14px;
+        flex-grow: 1;
+        border: none;
+        padding: 12px;
+        border-radius: 6px 0 0 6px;
+    }
+
+    &__button {
+        background-color: $color-primary-green;
+        border-radius: 0 6px 6px 0;
+        padding: 12px 26px;
+        border: none;
+        cursor: pointer;
+
+        color: $color-primary-white;
+        font-family: "Cera Pro";
+        font-size: 18px;
+        font-weight: 700;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $color-primary-white;
+            color: $color-primary-green;
+            box-shadow: 0 0 6px $color-primary-green;
+        }
+    }
+
+    &__newsletter-description {
+        color: $color-secondary-727272;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 168%;
+    }
+}

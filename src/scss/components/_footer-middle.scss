@@ -1,0 +1,52 @@
+.footer-middle {
+    &__container {
+        padding: 24px;
+        background-color: rgba($color-primary-green, 0.1);
+        border-top: 1px rgba($color-primary-green, 0.2) solid;
+        border-bottom: 1px rgba($color-primary-green, 0.2) solid;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px 36px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex: 1 1 200px;
+
+        &:last-child {
+            flex-basis: 200px;
+
+            @media screen and (min-width: 1120px) {
+                flex-basis: 324px;
+            }
+        }
+    }
+
+    &__icon {
+        position: relative;
+        fill: $color-primary-green;
+
+        @media screen and (min-width: 1120px) {
+            position: absolute;
+            left: -26px;
+        }
+        
+        &--none {
+            fill: none;
+            stroke: $color-primary-green;
+        }
+    }
+
+    &__link {
+        max-width: 174px;
+        font-size: 14px;
+        line-height: 158%;
+    }
+}

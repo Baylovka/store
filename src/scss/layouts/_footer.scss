@@ -1,2 +1,20 @@
+@import '../components/footer-top';
+@import '../components/footer-middle';
+@import '../components/footer-bottom';
+
 .footer {
+    &__title {
+        margin-bottom: 8px;
+        color: $color-primary-gray;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 88%;
+    }
+
+    &__copyright {
+        font-size: 14px;
+        line-height: 214%;
+        text-align: center;
+        padding: 8px 0;
+    }
 }
