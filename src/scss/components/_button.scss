@@ -15,4 +15,13 @@
 
     fill: none;
     stroke: $color-primary-white;
+
+    transition: all .3s;
+
+    &:hover {
+        background-color: $color-primary-white;
+        color: $color-primary-green;
+        stroke: $color-primary-green;
+        box-shadow: 0 0 6px $color-primary-green;
+    }
 }

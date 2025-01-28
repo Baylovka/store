@@ -6,6 +6,12 @@
     font-size: 0;
     width: fit-content;
     height: fit-content;
-    color: $color-primary-gray;
+    fill: $color-primary-gray;
     cursor: pointer;
+    transition: fill .3s, filter .3s;
+
+    &:hover {
+        fill: $color-primary-green;
+        filter: drop-shadow(0 0 10px $color-primary-green);
+    }
 }

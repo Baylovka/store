@@ -1,7 +1,17 @@
 .cart {
     position: relative;
+    fill: $color-primary-gray;
+    font-size: 0;
+    transition: fill .3s, filter .3s, border 3s;
 
-    // &__icon {}
+    &:hover {
+        fill: $color-primary-green;
+        filter: drop-shadow(0 0 10px $color-primary-green);
+    }
+
+    &:hover &__count {
+        border: 3px $color-primary-green solid;
+    }
 
     &__count {
         position: absolute;
@@ -20,5 +30,6 @@
         font-family: "Cera Pro";
         font-size: 10px;
         font-weight: 500;
+        transition: border .3s;
     }
 }
