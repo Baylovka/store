@@ -1,13 +1,10 @@
 .header {
-
     &__container {
         display: flex;
         justify-content: space-between;
         padding: 26px 0 18px 0;
         border-bottom: 0.3px rgba($color-primary-green, 0.5) solid;
     }
-
-    // &__logo {}
 
     &__nav {
         display: flex;
@@ -27,6 +24,7 @@
 
     &__link {
         &::before {
+            height: 3px;
             bottom: -28px;
         }
     }
