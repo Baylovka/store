@@ -3,12 +3,13 @@ import Icon from "./Icon";
 
 interface ButtonProps {
     iconId?: string;
-    children: ReactNode
+    className?: string;
+    children: ReactNode;
 };
 
-export default function Button({ iconId, children }: ButtonProps) {
+export default function Button({ iconId, className, children }: ButtonProps) {
     return (
-        <button className="button">
+        <button className={`button ${className}`}>
             {iconId && <Icon id={iconId} width={16} height={16} />}
             {children}
         </button>
