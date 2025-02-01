@@ -1,0 +1,77 @@
+.main-slider {
+    width: 100%;
+    border-radius: 30px;
+    background: linear-gradient(105deg, rgba($color-primary-green, 0.20) 1%, rgba($color-primary-green, 0.10) 99%);
+    margin-top: 12px;
+    margin-bottom: 46px;
+    
+    @media screen and (min-width: $bp-mobile) {
+        border-radius: 0;
+        background: linear-gradient(98deg, rgba($color-background, 0.50) -24%, rgba($color-background, 0.50) 108%);
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: -10px;
+        left: -80px;
+        width: 248px;
+        height: 248px;
+        border-radius: 50%;
+        background: linear-gradient(160deg, rgba($color-primary-white, 0.43) 22%, rgba($color-primary-green, 0.04) 88%);
+
+        @media screen and (min-width: $bp-mobile) {
+            content: none;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0px;
+        left: 74px;
+        width: 248px;
+        height: 248px;
+        border-radius: 50%;
+        background: linear-gradient(160deg, rgba($color-primary-white, 0.37) 22%, rgba($color-primary-green, 0.00) 88%);
+
+        @media screen and (min-width: $bp-mobile) {
+            content: none;
+        }
+    }
+
+    &__slide {
+        background: transparent;
+    }
+
+    &__progress-container {
+        position: absolute;
+        right: clamp(0.625rem, calc(0.489rem + 0.682vw), 1rem); /* min: 10px, max: 16px */
+        bottom: clamp(0.625rem, calc(0.489rem + 0.682vw), 1rem); /* min: 10px, max: 16px */
+        z-index: 10;
+        width: clamp(1.5rem, calc(0.955rem + 2.727vw), 3rem); /* min: 24px, max: 48px */
+        height: clamp(1.5rem, calc(0.955rem + 2.727vw), 3rem); /* min: 24px, max: 48px */
+        font-size: clamp(0.625rem, calc(0.489rem + 0.682vw), 1rem); /* min: 10px, max: 16px */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: $color-primary-green;
+
+        & svg {
+            --progress: 0;
+            position: absolute;
+            left: 0;
+            top: 0px;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            stroke-width: 4px;
+            stroke: $color-primary-green;
+            fill: none;
+            stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+            stroke-dasharray: 125.6;
+            transform: rotate(-90deg);
+        }
+    }
+}

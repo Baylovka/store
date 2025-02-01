@@ -1,0 +1,32 @@
+.slider-pagination {
+    position: absolute;
+    z-index: 20;
+    bottom: clamp(0.5rem, calc(0.273rem + 1.136vw), 1.125rem); /* min: 8px, max: 18px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+
+    @media screen and (min-width: $bp-mobile) {
+        gap: 8px;
+    }
+
+    &__bullet {
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: rgba($color-primary-green, 0.3);
+        cursor: pointer;
+
+        @media screen and (min-width: $bp-mobile) {
+            width: 8px;
+            height: 8px;
+        }
+
+        &--active {
+            background-color: $color-primary-green;
+        }
+    }
+}
