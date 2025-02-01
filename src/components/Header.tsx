@@ -9,8 +9,8 @@ export default function Header() {
         <header className="header">
             <div className="container">
                 <div className="header__container">
-                    <Link href={'/'} className="header__logo">
-                        <Image src="/logo.svg" width={150} height={34} alt="logo" />
+                    <Link href={'/'}>
+                        <Image className="header__logo" src="/logo.svg" width={150} height={34} alt="logo" />
                     </Link>
                     <nav className="header__nav">
                         <ul className="header__menu">
