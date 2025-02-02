@@ -1,0 +1,117 @@
+.blog-section {
+    margin: 100px 0; // TODO: change
+
+    &__container {
+        display: flex;
+        gap: clamp(1.5rem, calc(1.091rem + 2.045vw), 2.625rem); /* min: 24px, max: 42px */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__card {
+        background-color: $color-secondary-white;
+        flex: 0 1 calc(100% / 4 - 42px * 3);
+        min-width: 280px;
+        user-select: none;
+        transition: box-shadow .3s;
+
+        &:hover {
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+        }
+
+        @media screen and (min-width: $bp-mobile) {
+            min-width: 320px;
+        }
+        
+        @media screen and (min-width: $bp-tablet) {
+            min-width: 198px;
+        }
+
+        @media screen and (min-width: 942px) {
+            flex-grow: 1;
+        }
+    }
+
+    &__image-container {
+        max-width: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        height: fit-content;
+        max-height: 196px;
+    }
+
+    &__content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: clamp(0.5rem, calc(0.364rem + 0.682vw), 0.875rem); /* min: 8px, max: 14px */
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__info {
+        color: $color-primary-green;
+        font-size: clamp(0.688rem, calc(0.619rem + 0.341vw), 0.875rem); /* min: 11px, max: 14px */
+        font-weight: 500;
+        line-height: 114%;
+    }
+
+    &__title {
+        color: $color-primary-gray;
+        font-size: clamp(1rem, calc(0.909rem + 0.455vw), 1.25rem); /* min: 16px, max: 20px */
+        font-weight: 700;
+        line-height: 130%;
+    }
+
+    &__description {
+        color: $color-secondary-727272;
+        font-size: clamp(0.688rem, calc(0.619rem + 0.341vw), 0.875rem); /* min: 11px, max: 14px */
+        line-height: 1.5;
+        height: calc(1.5em * 2);
+        overflow: hidden;
+
+        /* add "..." after two rows */ 
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    &__link {
+        display: flex;
+        align-items: end;
+        gap: 4px;
+        width: fit-content;
+        color: $color-primary-gray;
+        font-size: clamp(0.75rem, calc(0.705rem + 0.227vw), 0.875rem); /* min: 12px, max: 14px */
+        font-weight: 500;
+        line-height: 114%;
+        transition: color .3s;
+
+        & svg {
+            fill: none;
+            stroke: $color-primary-gray;
+            width: clamp(0.625rem, calc(0.58rem + 0.227vw), 0.75rem); /* min: 10px, max: 12px */
+            height: clamp(0.625rem, calc(0.58rem + 0.227vw), 0.75rem); /* min: 10px, max: 12px */
+            transition: stroke .3s;
+        }
+
+        &:hover {
+            color: $color-primary-green;
+            font-weight: 500;
+
+            & svg {
+                stroke: $color-primary-green;
+            }
+        }
+
+        &::before {
+            left: 0;
+        }
+    }
+}
