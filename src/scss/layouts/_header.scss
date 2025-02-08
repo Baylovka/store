@@ -13,10 +13,6 @@
         border-bottom: 0.3px rgba($color-primary-green, 0.5) solid;
     }
 
-    &__logo {
-        width: auto;
-    }
-
     &__nav {
         display: flex;
         align-items: center;
@@ -28,14 +24,14 @@
 
         @media screen and (min-width: $bp-tablet) {
             display: flex;
-            gap: clamp(1.5rem, calc(-1.389rem + 6.019vw), 3.125rem); /* min: 24px, max: 50px */
+            gap: clamp(1.5rem, calc(-1.389rem + 6.019vw), 3.125rem); // min: 24px, max: 50px
         }
     }
 
     &__utility-bar {
         display: flex;
         align-items: center;
-        gap: clamp(1.125rem, calc(0.659rem + 1.622vw), 1.875rem); /* min: 18px, max: 30px */
+        gap: clamp(1.125rem, calc(0.659rem + 1.622vw), 1.875rem); // min: 18px, max: 30px
     }
 
     &__link {
