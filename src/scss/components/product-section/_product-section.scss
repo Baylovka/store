@@ -1,0 +1,36 @@
+@import './filter-list';
+@import './price-slider';
+@import './sort-block';
+@import './products';
+@import './pagination';
+
+.product-section {
+    display: flex;
+    gap: clamp(2.5rem, calc(1.389rem + 2.315vw), 3.125rem); // min: 40px, max: 50px
+
+    &__filters {
+        display: none;
+        
+        @media screen and (min-width: $bp-tablet) {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            padding: 24px;
+            background-color: $color-secondary-white;
+    
+            flex: 1;
+            min-width: fit-content; 
+        }
+    }
+
+    &__filters-title {
+        color: $color-primary-gray;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 88%;
+    }
+
+    &__main {
+        flex: 3;
+    }
+}

@@ -1,0 +1,37 @@
+.hover-menu {
+    display: none;
+    
+    @media screen and (min-width: $bp-small-desktop) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 0;
+        padding: 8px;
+        background: #0000;
+        backdrop-filter: blur(1px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    &__container {
+        display: flex;
+        gap: 26px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item {
+        fill: $color-primary-gray;
+        cursor: pointer;
+        transition: fill .3s;
+
+        &:hover {
+            fill: $color-primary-green;
+        }
+    }
+}

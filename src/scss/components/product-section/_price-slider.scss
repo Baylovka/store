@@ -1,0 +1,112 @@
+.price-slider {
+    margin-left: 12px;
+
+    &__container {
+        position: relative;
+        width: 100%;
+        height: 4px;
+        margin: 30px 0 20px;
+    }
+
+    &__track {
+        height: 100%;
+        position: absolute;
+        background-color: $color-primary-green;
+
+        &--initial {
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            background-color: rgba($color-primary-green, 0.2);
+            border-radius: 2px;
+        }
+    }
+
+    &__input {
+        position: absolute;
+        width: 100%;
+        background: none;
+        pointer-events: none;
+        top: 50%;
+        transform: translateY(-50%);
+        appearance: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    & input[type="range"]::-webkit-slider-thumb {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: 3px solid $color-primary-white;
+        background: $color-primary-green;
+        pointer-events: auto;
+        appearance: none;
+        -moz-appearance: none;
+        cursor: grab;
+        box-shadow: 0 0.125rem 0.5625rem -0.125rem rgba(0, 0, 0, 0.25);
+    }
+
+    & input[type="range"]::-moz-range-thumb {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: 3px solid $color-primary-white;
+        background: $color-primary-green;
+        pointer-events: auto;
+        appearance: none;
+        -moz-appearance: none;
+        cursor: grab;
+        box-shadow: 0 0.125rem 0.5625rem -0.125rem rgba(0, 0, 0, 0.25);
+    }
+
+    &__wapper-tooltip {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &__tooltip {
+        padding: 0.25rem 0.5rem;
+        border: 0;
+        font-size: 12px;
+        background: $color-primary-green;
+        color: $color-primary-white;
+        border-radius: 0.25rem;
+        bottom: 120%;
+        display: block;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    &__tooltip-min {
+        transform: translateY(-130%);
+        z-index: 10;
+    }
+
+    &__tooltip-max {
+        transform: translateY(-130%);
+        z-index: 10;
+    }
+
+    &__range-min-max {
+        color: $color-primary-gray;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 106%;
+        margin-bottom: 16px;
+
+        &--brand {
+            color: $color-primary-green;
+            font-weight: 700;
+        }
+    }
+
+    &__title {
+        color: $color-primary-gray;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 88%;
+        margin-left: -12px;
+    }
+}

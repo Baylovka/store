@@ -1,0 +1,105 @@
+$pagination-item-size: clamp(1.625rem, calc(1.398rem + 1.136vw), 2.25rem); // min: 26px, max: 36px
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.25rem, calc(0.114rem + 0.682vw), 0.625rem); // min: 4px, max: 10px
+    margin-bottom: 100px;
+
+    @media screen and (min-width: $bp-mobile) {
+        justify-content: flex-end;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(0.25rem, calc(0.114rem + 0.682vw), 0.625rem); // min: 4px, max: 10px
+        font-size: clamp(0.813rem, calc(0.699rem + 0.568vw), 1.125rem); // min: 13px, max: 18px
+        border: none;
+        user-select: none;
+    }
+
+    &__field {
+        position: relative;
+        width: $pagination-item-size;
+        height: $pagination-item-size;
+
+        &--inactive {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: not-allowed;
+            border: none;
+        }
+    }
+
+    &__input {
+        appearance: none;
+    }
+
+    &__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #E5E5E5;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: color .3s, background-color .3s, border .3s;
+
+        @media screen and (min-width: $bp-mobile) {
+            border-radius: 4px;
+        }
+
+        &:hover {
+            color: $color-primary-white;
+            background-color: $color-primary-green;
+            border: 1px solid $color-primary-green;
+        }
+    }
+
+    &__input:checked + &__label {
+        border: 1px solid $color-primary-green;
+        background-color: $color-primary-green;
+        color: $color-primary-white;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $pagination-item-size;
+        height: $pagination-item-size;
+        background-color: transparent;
+        border: 1px solid $color-background;
+        border-radius: 50%;
+        fill: none;
+        stroke: $color-primary-gray;
+        cursor: pointer;
+        transition: background-color .3s, stroke .3s;
+
+        @media screen and (min-width: $bp-mobile) {
+            border-radius: 4px;
+        }
+
+        & > svg {
+            width: clamp(0.875rem, calc(0.784rem + 0.455vw), 1.125rem); /* min: 14px, max: 18px */
+            height: clamp(0.875rem, calc(0.784rem + 0.455vw), 1.125rem); /* min: 14px, max: 18px */
+        }
+
+        &:hover {
+            background-color: $color-primary-green;
+            stroke: $color-primary-white;
+        }
+
+        &--rotate {
+            transform: rotate(180deg);
+        }
+    }
+}
