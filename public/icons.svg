@@ -134,5 +134,9 @@
                 d="M30.404 15.471h-28.888M18.753 3.867s11.651 6.283 11.651 11.601c0 5.324-11.651 11.607-11.651 11.607">
             </path>
         </symbol>
+        <symbol id="icon-arrow-2" viewBox="0 0 32 32">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667"
+                d="M9.375 1.75s14.25 8.436 14.25 14.25c0 5.811-14.25 14.25-14.25 14.25"></path>
+        </symbol>
     </defs>
 </svg>
