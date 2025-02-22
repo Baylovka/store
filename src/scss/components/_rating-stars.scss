@@ -1,0 +1,14 @@
+.rating-stars {
+    &__container {
+        display: flex;
+        gap: 4px;
+    }
+
+    &__icon {
+        fill: #C4C4C4;
+
+        &--fill {
+            fill: #FFAC0C;
+        }
+    }
+}
