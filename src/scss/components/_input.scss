@@ -1,0 +1,41 @@
+.input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 14px 0 14px 14px;
+    background-color: transparent;
+
+    &:focus-within {
+        border: 1px solid $color-primary-green;
+    }
+
+    &:focus-within &__icon {
+        fill: $color-primary-green;
+    }
+
+    &__input {
+        width: 100%;
+        font-family: "Cera Pro", sans-serif;
+        color: $color-primary-gray;
+        font-size: 14px;
+        line-height: 114%;
+        border: none;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $color-mobile-gray;
+        }
+    }
+
+    &__icon {
+        fill: $color-mobile-gray;
+    }
+}
