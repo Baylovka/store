@@ -1,0 +1,22 @@
+@import './product-gallery';
+@import './product-details';
+
+.product-page {
+    &__main-section {
+        display: flex;
+        justify-content: space-between;
+        gap: 52px;
+    }
+
+    &__images {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 30px;
+        height: 448px;
+        user-select: none;
+    }
+
+    &__details {
+        flex-grow: 1;
+    }
+}
