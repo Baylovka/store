@@ -1,0 +1,42 @@
+.header-mobile {
+    display: block;
+    margin: 18px 0;
+
+    @media screen and (min-width: $bp-mobile) {
+        display: none;
+    }
+
+    &__container {
+        display: flex;
+        gap: 8px;
+        height: 45px;
+    }
+
+    &__input {
+        background: #F8F8F8;
+        border: none;
+
+        &:focus-within {
+            border: none;
+        }
+    
+        &:focus-within &__icon {
+            fill: $color-primary-green;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        border-radius: 14px;
+        background: linear-gradient(137deg, rgba($color-primary-green, 0.45) -25%, $color-primary-green 100%);
+        box-shadow: 0px 10px 20px 0px rgba($color-primary-green, 0.30);
+        height: 100%;
+        aspect-ratio: 1 / 1;
+
+        &:hover {
+            background: none;
+            box-shadow: 0px 10px 20px 0px rgba($color-primary-green, 0.30);
+        }
+    }
+}

@@ -3,6 +3,7 @@ import "../scss/main.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BottomNavMenu from "@/components/Mobile/BottomNavMenu/BottomNavMenu";
+import HeaderMobile from "@/components/Mobile/HeaderMobile/HeaderMobile";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <HeaderMobile />
         <Header />
         {children}
         <Footer />
