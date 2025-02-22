@@ -1,0 +1,40 @@
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    user-select: none;
+
+    &__button-style {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &--product-page {
+            width: 32px;
+            height: 36px;
+            border: none;
+            border-radius: 28px;
+            background: linear-gradient(180deg, $color-primary-green 0%, rgba($color-primary-green, 0.80) 100%);
+            color: $color-primary-white;
+            font-size: 28px;
+
+            &:hover {
+                background: $color-primary-white;
+                color: $color-primary-green;
+                box-shadow: 0 0 6px $color-primary-green;
+            }
+        }
+    }
+
+    &__count-style {
+        &--product-page {
+            width: 30px;
+            text-align: center;
+            color: $color-primary-gray;
+            font-size: 20px;
+            line-height: 50%;
+        }
+    }
+}
