@@ -6,6 +6,7 @@ import Counter from "../Counter";
 import useCounter from "@/hooks/useCounter";
 import { useState } from "react";
 import RatingStars from "./RatingStars";
+import BottomProductMenu from "../Mobile/BottomProductMenu/BottomProductMenu";
 
 const prod = {
     title: "Barberton Daisy",
@@ -30,7 +31,16 @@ export default function ProductDetails() {
 
     return (
         <div className="product-page__details product-details">
-            <h1 className="product-details__main-title">{prod.title}</h1>
+            <div className="product-details__mobile-title-container">
+                <h1 className="product-details__main-title">{prod.title}</h1>
+                <div className="product-details__mobile-rating-container">
+                    <div className="product-details__mobile-rating-average">
+                        <Icon id="star" width={12} height={12} />
+                        {prod.rating.average}
+                    </div>
+                    <p className="product-details__mobile-rating-count">({prod.rating.count})</p>
+                </div>
+            </div>
 
             <div className="product-details__price-rating-container">
                 <div className="product-details__price">
@@ -51,7 +61,9 @@ export default function ProductDetails() {
             <hr className="product-details__decor-line" />
 
             <div className="product-details__short-description-container">
-                <h2 className="product-details__second-title">Short Description:</h2>
+                <h2 className="product-details__second-title product-details__short-description-title">
+                    Short Description:
+                </h2>
                 <p className="product-details__short-description">{prod.shortDescription}</p>
             </div>
 
@@ -118,6 +130,10 @@ export default function ProductDetails() {
                     </Link>
                 </div>
             </div>
+            <BottomProductMenu
+                counter={{ decrement, increment, count }}
+                price={{ standart: prod.price.standart, sale: prod.price.sale }}
+            />
         </div>
     );
 }
