@@ -1,0 +1,95 @@
+.bottom-product-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 26px;
+    border-radius: 40px 40px 0px 0px;
+    background: $color-primary-white;
+    box-shadow: 0px 0px 20px 0px rgba(205, 205, 205, 0.30);
+
+    @media screen and (min-width: $bp-mobile) {
+        display: none;
+    }
+
+    &__top-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 18px;
+    }
+
+    &__counter-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__counter-title {
+        color: $color-secondary-727272;
+        font-size: 15px;
+        line-height: 106%;
+    }
+
+    &__price {
+        display: flex;
+        gap: 8px;
+
+        &--sale {
+            color: $color-primary-green;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 80%;
+        }
+
+        &--standart {
+            color: $color-secondary-727272;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 80%;
+            text-decoration: line-through;
+        }
+    }
+
+    &__bottom-container {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__button {
+        height: 60px;
+
+        &--green {
+            padding: 0 clamp(3.375rem, calc(1.946rem + 7.143vw), 4rem); // min: 54px, max: 64px
+            font-size: 16px;
+            font-weight: 700;
+            background: linear-gradient(93deg, $color-primary-green -4%, rgba($color-primary-green, 0.80) 120%);
+            box-shadow: 0px 10px 20px 0px rgba($color-primary-green, 0.30);
+
+            &:hover {
+                background: $color-primary-white;
+            }
+        }
+
+        &--white {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-background;
+            aspect-ratio: 1 / 1;
+
+            &:hover {
+                background-color: rgba($color-background, 0.6);
+                stroke: none;
+                box-shadow: none;
+            }
+
+            & svg {
+                fill: $color-secondary-727272;
+                stroke: none;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
