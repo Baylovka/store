@@ -1,7 +1,10 @@
 'use client'
 import Icon from "@/components/Icon";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+
+const routes = ["/"];
 
 const menu = [
     {
@@ -49,6 +52,12 @@ function addIdentifierToClass(activeTab: number, index: number) {
 
 export default function BottomNavMenu() {
     const [activeTab, setActiveTab] = useState<number>(0);
+    const pathName = usePathname();
+
+    const showMenu = routes.includes(pathName);
+    if(!showMenu) {
+        return null;
+    }
     
     return (
         <nav className="bottom-nav-menu">
