@@ -26,6 +26,21 @@
                 box-shadow: 0 0 6px $color-primary-green;
             }
         }
+
+        &--product-page-mobile {
+            width: 24px;
+            height: 28px;
+            border: none;
+            border-radius: 30px;
+            background: $color-background;
+            color: $color-primary-gray;
+            font-size: 22px;
+            -webkit-tap-highlight-color: transparent;
+
+            &:active {
+                color: $color-secondary-727272;
+            }
+        }
     }
 
     &__count-style {
@@ -35,6 +50,15 @@
             color: $color-primary-gray;
             font-size: 20px;
             line-height: 50%;
+        }
+
+        &--product-page-mobile {
+            width: 28px;
+            text-align: center;
+            color: $color-primary-gray;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 56%;
         }
     }
 }
