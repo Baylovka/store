@@ -53,7 +53,7 @@ export default function ProductDetails() {
                     <p className="product-details__price--standart">${prod.price.standart}</p>
                 </div>
                 <div className="product-details__rating">
-                    <RatingStars average={prod.rating.average} />
+                    <RatingStars average={prod.rating.average} uniqueIdPartialFill="details-rating-fill"/>
                     <p className="product-details__rating-count">{prod.rating.count}&nbsp;Customer Review</p>
                 </div>
             </div>

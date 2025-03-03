@@ -2,9 +2,11 @@ import Icon from "../Icon";
 
 interface RatingStarsProps {
     average: number;
+    uniqueIdPartialFill: string;
     maxRating?: number;
 }
-export default function RatingStars({ average, maxRating = 5 }: RatingStarsProps) {
+
+export default function RatingStars({ average, maxRating = 5, uniqueIdPartialFill }: RatingStarsProps) {
     const fullStars = Math.floor(average);
     const partialStarPercentage = Math.round((average - fullStars) * 100);
 
@@ -18,12 +20,12 @@ export default function RatingStars({ average, maxRating = 5 }: RatingStarsProps
                 {partialStarPercentage > 0 && (
                     <svg width={12} height={12}>
                         <defs>
-                            <linearGradient id="partialFill" x1="0" y1="0" x2="1" y2="0">
+                            <linearGradient id={uniqueIdPartialFill} x1="0" y1="0" x2="1" y2="0">
                                 <stop offset={`${partialStarPercentage}%`} stopColor="#FFAC0C" />
                                 <stop offset={`${partialStarPercentage}%`} stopColor="#C4C4C4" stopOpacity="1" />
                             </linearGradient>
                         </defs>
-                        <use href={`/icons.svg#icon-star`} fill="url(#partialFill)" />
+                        <use href={`/icons.svg#icon-star`} fill={`url(#${uniqueIdPartialFill})`} />
                     </svg>
                 )}
 
