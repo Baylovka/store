@@ -2,10 +2,10 @@
 @import './tab-reviews';
 
 .product-tabs {
-    margin-top: 90px; // TODO: delete
     display: flex;
     flex-direction: column;
     gap: 18px;
+    margin-bottom: clamp(3.125rem, calc(2.216rem + 4.545vw), 5.625rem); // min: 50px, max: 90px
 
     &__list-tabs {
         display: flex;
