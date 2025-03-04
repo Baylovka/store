@@ -2,12 +2,22 @@
 @import './product-details';
 
 .product-page {
+    &__title {
+        color: $color-primary-green;
+        font-size: 18px;
+        font-weight: 700;
+        padding-bottom: 9px;
+        border-bottom: 0.6px solid rgba($color-primary-green, 0.5);
+        margin-bottom: 18px;
+    }
+
     &__main-section {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 20px;
-        
+        margin-bottom: clamp(3.125rem, calc(2.216rem + 4.545vw), 5.625rem); // min: 50px, max: 90px
+
         @media screen and (min-width: $bp-mobile) {
             gap: clamp(2rem, calc(-5.273rem + 11.364vw), 3.25rem); // min: 32px, max: 52px
         }
@@ -49,5 +59,9 @@
 
     &__details {
         flex: 1 1 384px;
+    }
+
+    &__related-product-section {
+        margin-bottom: clamp(3.125rem, calc(2.216rem + 4.545vw), 5.625rem); // min: 50px, max: 90px
     }
 }
