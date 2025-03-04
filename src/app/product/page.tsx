@@ -1,15 +1,21 @@
 import ProductDetails from "@/components/ProductPage/ProductDetails";
 import ProductImages from "@/components/ProductPage/ProductImages";
+import ProductTabs from "@/components/ProductPage/ProductTabs/ProductTabs";
 
 export default function ProductPage() {
     return (
         <div className="product-page">
             <div className="container product-page__main-section--outer-container">
-                <div className="product-page__main-section">
+                <section className="product-page__main-section">
                     <ProductImages />
                     <ProductDetails />
-                </div>
+                </section>
             </div>
+            <section className="product-page__tabs-section">
+                <div className="container">
+                    <ProductTabs />
+                </div>
+            </section>
         </div>
     );
 }

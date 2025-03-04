@@ -1,0 +1,41 @@
+.tab-reviews {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__item {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 12px;
+        border-radius: 24px;
+
+        @media screen and (min-width: $bp-mobile) {
+            border-radius: unset;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 4px;
+    }
+
+    &__author {
+        color: $color-primary-gray;
+        font-weight: 700;
+    }
+
+    &__date {
+        color: $color-secondary-727272;
+        font-size: 12px;
+    }
+
+    &__content {
+        margin: 12px 0;
+        color: $color-secondary-727272;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}

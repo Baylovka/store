@@ -1,0 +1,33 @@
+@import './tab-description';
+@import './tab-reviews';
+
+.product-tabs {
+    margin-top: 90px; // TODO: delete
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    &__list-tabs {
+        display: flex;
+        gap: 30px;
+        border-bottom: 0.6px solid rgba($color-primary-green, 0.5);
+    }
+
+    &__tab {
+        font-size: clamp(0.875rem, calc(0.83rem + 0.227vw), 1rem); // min: 14px, max: 16px
+        line-height: 94%;
+        padding-bottom: 9px;
+        cursor: pointer;
+        transition: color .3s;
+
+        &:hover {
+            color: $color-primary-green;
+        }
+
+        &--active {
+            border-bottom: 3px solid $color-primary-green;
+            font-weight: 700;
+            color: $color-primary-green;
+        }
+    }
+}
