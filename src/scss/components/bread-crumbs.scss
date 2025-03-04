@@ -1,0 +1,39 @@
+.bread-crumbs {
+    display: none;
+    
+    @media screen and (min-width: $bp-mobile) {
+        display: block;
+        margin: clamp(1.75rem, calc(1.439rem + 1.081vw), 2.25rem) 0; // min: 28px, max: 36px
+    }
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+    }
+
+    &__item {
+        &:not(:last-child)::after {
+            content: '/';
+            margin: 0 5px;
+            color: $color-primary-gray;
+        }
+    }
+
+    &__link {
+        color: $color-primary-gray;
+        font-size: 15px;
+        font-weight: 400;
+        transition: color .3s;
+
+        &:hover {
+            color: $color-secondary-727272;
+        }
+
+        &--current {
+            color: $color-primary-green;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: default;
+        }
+    }
+}
