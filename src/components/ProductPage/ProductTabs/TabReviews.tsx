@@ -1,4 +1,4 @@
-import RatingStars from "../RatingStars";
+import RatingStars from "@/components/RatingStars";
 
 interface Review {
     name: string,

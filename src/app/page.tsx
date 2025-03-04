@@ -1,7 +1,7 @@
-import BlogSection from "@/components/BlogSection";
-import MainSlider from "@/components/MainSlider";
+import BlogSection from "@/components/BlogSection/BlogSection";
+import MainSlider from "@/components/MainSlider/MainSlider";
 import ProductSection from "@/components/ProductSection/ProductSection";
-import PromoSection from "@/components/PromoSection";
+import PromoSection from "@/components/PromoSection/PromoSection";
 
 export default function Home() {
   return (

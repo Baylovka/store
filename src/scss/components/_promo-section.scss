@@ -11,7 +11,7 @@
         display: flex;
         flex: 1 1 calc((100%/2) - 28px);
         background-color: $color-secondary-white;
-        padding: clamp(1.25rem, calc(1.023rem + 1.136vw), 1.875rem) 0; /* min: 20px, max: 30px */
+        padding: clamp(1.25rem, calc(1.023rem + 1.136vw), 1.875rem) 0; // min: 20px, max: 30px
         
         @media screen and (min-width: $bp-mobile) {
             padding-right: clamp(1.25rem, calc(1.023rem + 1.136vw), 1.875rem);
@@ -36,7 +36,7 @@
         flex-direction: column;
         align-items: flex-end;
         text-align: right;
-        gap: clamp(0.75rem, calc(0.568rem + 0.909vw), 1.25rem); /* min: 12px, max: 20px */
+        gap: clamp(0.75rem, calc(0.568rem + 0.909vw), 1.25rem); // min: 12px, max: 20px
         flex-grow: 1;
         min-width: 140px;
     }
@@ -45,13 +45,13 @@
         text-transform: uppercase;
         max-width: 150px;
         font-weight: 900;
-        font-size: clamp(1rem, calc(0.955rem + 0.227vw), 1.125rem); /* min: 16px, max: 18px */
+        font-size: clamp(1rem, calc(0.955rem + 0.227vw), 1.125rem); // min: 16px, max: 18px
     }
 
     &__description {
         line-height: 1.5;
         height: calc(1.5em * 3);
-        font-size: clamp(0.625rem, calc(0.557rem + 0.341vw), 0.813rem); /* min: 10px, max: 13px */
+        font-size: clamp(0.625rem, calc(0.557rem + 0.341vw), 0.813rem); // min: 10px, max: 13px
         color: $color-secondary-727272;
         max-width: none;
         
@@ -62,7 +62,7 @@
 
     &__button {
         display: flex;
-        margin-bottom: clamp(0.5rem, calc(0.318rem + 0.909vw), 1rem); /* min: 8px, max: 16px */
+        margin-bottom: clamp(0.5rem, calc(0.318rem + 0.909vw), 1rem); // min: 8px, max: 16px
 
         &>:first-child {
             order: 2;

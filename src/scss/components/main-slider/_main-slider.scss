@@ -46,12 +46,12 @@
 
     &__progress-container {
         position: absolute;
-        right: clamp(0.625rem, calc(0.489rem + 0.682vw), 1rem); /* min: 10px, max: 16px */
-        bottom: clamp(0.625rem, calc(0.489rem + 0.682vw), 1rem); /* min: 10px, max: 16px */
+        right: clamp(0.625rem, calc(0.489rem + 0.682vw), 1rem); // min: 10px, max: 16px
+        bottom: clamp(0.625rem, calc(0.489rem + 0.682vw), 1rem); // min: 10px, max: 16px
         z-index: 10;
-        width: clamp(1.5rem, calc(0.955rem + 2.727vw), 3rem); /* min: 24px, max: 48px */
-        height: clamp(1.5rem, calc(0.955rem + 2.727vw), 3rem); /* min: 24px, max: 48px */
-        font-size: clamp(0.625rem, calc(0.489rem + 0.682vw), 1rem); /* min: 10px, max: 16px */
+        width: clamp(1.5rem, calc(0.955rem + 2.727vw), 3rem); // min: 24px, max: 48px
+        height: clamp(1.5rem, calc(0.955rem + 2.727vw), 3rem); // min: 24px, max: 48px
+        font-size: clamp(0.625rem, calc(0.489rem + 0.682vw), 1rem); // min: 10px, max: 16px
         display: flex;
         align-items: center;
         justify-content: center;

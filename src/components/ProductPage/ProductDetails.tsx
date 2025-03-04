@@ -5,7 +5,7 @@ import Icon from "../Icon";
 import Counter from "../Counter";
 import useCounter from "@/hooks/useCounter";
 import { useState } from "react";
-import RatingStars from "./RatingStars";
+import RatingStars from "../RatingStars";
 import BottomProductMenu from "../Mobile/BottomProductMenu/BottomProductMenu";
 
 const prod = {

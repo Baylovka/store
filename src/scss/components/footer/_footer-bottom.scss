@@ -44,7 +44,7 @@
 
     &__social-media {
         display: flex;
-        gap: clamp(0.5rem, calc(-0.875rem + 2vw), 0.625rem); /* min: 8px, max: 10px */
+        gap: clamp(0.5rem, calc(-0.875rem + 2vw), 0.625rem); // min: 8px, max: 10px
 
         &>a {
             padding: 8px;
@@ -68,7 +68,7 @@
 
         &>img {
             cursor: pointer;
-            width: clamp(2.5rem, calc(-5.75rem + 12vw), 3.25rem); /* min: 40px, max: 52px */
+            width: clamp(2.5rem, calc(-5.75rem + 12vw), 3.25rem); // min: 40px, max: 52px
             height: fit-content;
             filter: grayscale(100%);
 
