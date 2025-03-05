@@ -1,12 +1,10 @@
 .input {
     display: flex;
     align-items: center;
-    gap: 8px;
     width: 100%;
-    border: 1px solid #EAEAEA;
+    border: 1px solid $color-form;
     border-radius: 10px;
     overflow: hidden;
-    padding: 14px 0 14px 14px;
     background-color: transparent;
 
     &:focus-within {
@@ -19,6 +17,7 @@
 
     &__input {
         width: 100%;
+        padding: 14px 10px;
         font-family: "Cera Pro", sans-serif;
         color: $color-primary-gray;
         font-size: 14px;
@@ -33,9 +32,25 @@
         &::placeholder {
             color: $color-mobile-gray;
         }
+
+        &[type="password"] {
+            letter-spacing: 0.25em;
+
+            &::placeholder {
+                letter-spacing: 0;
+            }
+        }
     }
 
     &__icon {
         fill: $color-mobile-gray;
+        margin-left: 10px;
+
+        &--password {
+            fill: $color-secondary-727272;
+            margin-right: 10px;
+            margin-left: 0;
+            cursor: pointer;
+        }
     }
 }
