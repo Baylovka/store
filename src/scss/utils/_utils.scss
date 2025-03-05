@@ -3,3 +3,8 @@
     opacity: 0;
     pointer-events: none;
 }
+
+.scroll-disabled {
+    height: 100%;
+    overflow: hidden;
+}
