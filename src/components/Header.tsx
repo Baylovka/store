@@ -1,10 +1,19 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 import Cart from "./Cart";
 import ButtonIcon from "./ButtonIcon";
+import Modal from "./Modal";
+import Auth from "./Auth/Auth";
+import { useState } from "react";
+import useBodyClass from "@/hooks/useBodyClass";
 
 export default function Header() {
+    const [isHiddenModal, setIsHiddenModal] = useState<boolean>(true);
+    useBodyClass("scroll-disabled", !isHiddenModal);
+
     return (
         <header className="header">
             <div className="container">
@@ -37,12 +46,15 @@ export default function Header() {
                         </ul>
                     </nav>
                     <div className="header__utility-bar">
-                        <ButtonIcon iconId="search" />
+                        <ButtonIcon iconId="search" width={24} height={24} />
                         <Cart />
-                        <Button iconId="login">login</Button>
+                        <Button iconId="login" onClick={() => setIsHiddenModal(false)}>login</Button>
                     </div>
                 </div>
             </div>
+            <Modal isHidden={isHiddenModal} setIsHidden={setIsHiddenModal}>
+                <Auth />
+            </Modal>
         </header>
     );
 }
