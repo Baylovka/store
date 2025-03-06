@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
-import Cart from "./Cart";
+import CartIcon from "./CartIcon";
 import ButtonIcon from "./ButtonIcon";
 import Modal from "./Modal";
 import Auth from "./Auth/Auth";
@@ -47,7 +47,7 @@ export default function Header() {
                     </nav>
                     <div className="header__utility-bar">
                         <ButtonIcon iconId="search" width={24} height={24} />
-                        <Cart />
+                        <CartIcon />
                         <Button iconId="login" onClick={() => setIsHiddenModal(false)}>login</Button>
                     </div>
                 </div>
