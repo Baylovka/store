@@ -79,11 +79,11 @@ export default function ProductSection() {
                 />
                 <FilterList rows={size}>Size</FilterList>
             </aside>
-            <main className="product-section__main products">
+            <div className="product-section__main products">
                 <SortBlock />
                 <Products />
                 <Pagination />
-            </main>
+            </div>
         </section>
     );
 }
