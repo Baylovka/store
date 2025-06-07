@@ -19,7 +19,7 @@ export default function Header() {
             <div className="container">
                 <div className="header__container">
                     <Link href={'/'}>
-                        <Image className="header__logo" src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`} width={150} height={34} alt="logo" />
+                        <Image className="header__logo" src="/logo.svg" width={150} height={34} alt="logo" />
                     </Link>
                     <nav className="header__nav">
                         <ul className="header__menu">
