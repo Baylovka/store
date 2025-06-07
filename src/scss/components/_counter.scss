@@ -1,7 +1,7 @@
 .counter {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: clamp(0.25rem, calc(0.205rem + 0.227vw), 0.375rem); // min: 4px, max: 6px
     width: fit-content;
     user-select: none;
 
@@ -41,6 +41,34 @@
                 color: $color-secondary-727272;
             }
         }
+
+        &--cart-page {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: none;
+            background: $color-background;
+            font-size: 20px;
+            color: $color-primary-gray;
+            -webkit-tap-highlight-color: transparent;
+
+            @media screen and (min-width: $bp-mobile) {
+                width: 20px;
+                border-radius: 28px;
+                background: linear-gradient(180deg, $color-primary-green 0%, rgba($color-primary-green, 0.80) 100%);
+                color: $color-primary-white;
+
+                &:hover {
+                    background: $color-primary-white;
+                    color: $color-primary-green;
+                    box-shadow: 0 0 6px $color-primary-green;
+                }
+            }
+
+            &:active {
+                color: $color-secondary-727272;
+            }
+        }
     }
 
     &__count-style {
@@ -59,6 +87,15 @@
             font-size: 18px;
             font-weight: 500;
             line-height: 56%;
+        }
+
+        &--cart-page {
+            width: 24px;
+            text-align: center;
+            color: $color-primary-gray;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 60%;
         }
     }
 }
