@@ -1,0 +1,23 @@
+@import './cart-table';
+@import './cart-calculate';
+
+.cart-page {
+    &__cart-container {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    &__recommendations {
+        margin: 90px 0 120px;
+    }
+
+    &__recommendations-title {
+        color: $color-primary-green;
+        font-size: 18px;
+        font-weight: 700;
+        padding-bottom: 9px;
+        border-bottom: 0.6px solid rgba($color-primary-green, 0.5);
+        margin-bottom: 18px;
+    }
+}

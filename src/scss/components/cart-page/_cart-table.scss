@@ -1,0 +1,256 @@
+.cart-table {
+    height: fit-content;
+    width: 100%;
+    flex: 1 1;
+    border-collapse: separate;
+    text-align: left;
+    border-spacing: 0 10px;
+
+    & thead {
+        & tr {
+            position: relative;
+            display: none;
+
+            @media screen and (min-width: $bp-mobile) {
+                display: table-row;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0.6px;
+                background-color: rgba($color-primary-green, 0.5);
+            }
+        }
+
+        & th {
+            white-space: nowrap;
+            padding: 0px 8px 10px 8px;
+            color: $color-primary-gray;
+            font-size: clamp(0.938rem, calc(0.899rem + 0.135vw), 1rem); // min: 15px, max: 16px
+            font-weight: 500;
+        }
+    }
+
+    & tbody {
+        & tr {
+            position: relative;
+            background-color: transparent;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                box-shadow: 0px 6px 20px 0px rgba($color-form, 0.6);
+                z-index: -1;
+                border-radius: 14px;
+            }
+
+            @media screen and (min-width: $bp-mobile) {
+                background: $color-secondary-white;
+
+                &::after {
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
+
+        & td {
+            padding: 14px;
+
+            &:first-child {
+                border-top-left-radius: 14px;
+                border-bottom-left-radius: 14px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 14px;
+                border-bottom-right-radius: 14px;
+            }
+
+            @media screen and (min-width: $bp-mobile) {
+                padding: 8px;
+
+                &:first-child {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+
+                &:last-child {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+        }
+    }
+
+    &__column {
+        color: $color-secondary-727272;
+        font-size: clamp(0.75rem, calc(0.659rem + 0.455vw), 1rem); // min: 12px, max: 16px
+        font-weight: 500;
+
+        &--name {
+            overflow: hidden;
+        }
+
+        &--size,
+        &--color {
+            display: none;
+
+            @media screen and (min-width: $bp-tablet) {
+                display: table-cell;
+            }
+        }
+
+        &--price {
+            display: none;
+
+            @media screen and (min-width: 540px) {
+                display: table-cell;
+            }
+        }
+
+        &--count {
+            display: none;
+
+            @media screen and (min-width: $bp-mobile) {
+                display: table-cell;
+            }
+        }
+
+        &--total {
+            display: none;
+
+            @media screen and (min-width: $bp-mobile) {
+                display: table-cell;
+                color: $color-primary-green;
+                font-weight: 700;
+            }
+        }
+
+        &--btn-delete {
+            display: none;
+
+            @media screen and (min-width: $bp-mobile) {
+                display: table-cell;
+            }
+        }
+    }
+
+    &__name-image-container {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    &__product-image {
+        flex-shrink: 0;
+        font-size: 0;
+        width: clamp(6.25rem, calc(-2.321rem + 42.857vw), 10rem); // min: 100px, max: 160px
+        aspect-ratio: 1 / 1;
+        border-radius: 8px;
+        overflow: hidden;
+
+        @media screen and (min-width: $bp-mobile) {
+            width: 78px;
+        }
+    }
+
+    &__product-name-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        flex-grow: 1;
+    }
+
+    &__product-name {
+        font-size: clamp(0.875rem, calc(0.83rem + 0.227vw), 1rem); // min: 14px, max: 16px
+        font-weight: 500;
+
+        & > a {
+            color: $color-primary-gray;
+            transition: color .2s;
+
+            &:hover {
+                color: $color-primary-green;
+            }
+        }
+    }
+
+    &__product-type {
+        color: $color-mobile-gray;
+        font-size: clamp(0.75rem, calc(0.659rem + 0.455vw), 1rem); // min: 12px, max: 16px
+        line-height: 114%;
+        font-weight: 400;
+
+        &--value {
+            color: $color-secondary-727272;
+        }
+    }
+
+    &__product-tablet-block {
+        display: block;
+
+        @media screen and (min-width: $bp-tablet) {
+            display: none;
+        }
+    }
+
+    &__product-mobile-block {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        color: $color-primary-green;
+        font-weight: 700;
+
+        @media screen and (min-width: $bp-mobile) {
+            display: none;
+        }
+    }
+
+    &__mobile-functional-block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__product-delete-btn {
+        & > svg {
+            fill: none;
+            stroke: $color-primary-green;
+
+            @media screen and (min-width: $bp-mobile) {
+                stroke: $color-secondary-727272;
+            }
+
+            &:hover {
+                stroke: $color-primary-green;
+            }
+        }
+    }
+
+    &__hide {
+        &--tablet {
+            display: none;
+
+            @media screen and (min-width: $bp-tablet) {
+                display: table-cell;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @media screen and (min-width: 540px) {
+                display: table-cell;
+            }
+        }
+    }
+}
