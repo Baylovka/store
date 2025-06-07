@@ -20,7 +20,7 @@ export default function ProductsCard({ image, title, price }: ProductsCardProps)
     return (
         <li className='products__card'>
             <div className='products__image-container'>
-                <Link href={'/'}>
+                <Link href={'/product'}>
                     <Image
                         className="products__image"
                         src={image.src}
