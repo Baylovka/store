@@ -1,0 +1,181 @@
+$aside-account-indent: 24px;
+
+.aside-account {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px $aside-account-indent;
+    width: 100%;
+    z-index: 10;
+    background: $color-secondary-white;
+    transition: transform .3s;
+    box-shadow: 0px 6px 20px 0px $color-form;
+    border-radius: 12px;
+
+    @media screen and (min-width: $bp-tablet) {
+        position: relative;
+        width: auto;
+        box-shadow: none;
+        border-radius: unset;
+    }
+
+    &--open {
+        transform: translateY(0);
+    }
+
+    &--closed {
+        transform: translateY(-1000%);
+    }
+
+    &__title {
+        margin-left: -6px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        color: $color-secondary-727272;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 45px;
+        margin: 0 calc(0px - $aside-account-indent);
+
+        &:hover {
+
+            & svg,
+            span {
+                fill: $color-primary-green;
+                color: $color-primary-green;
+                font-weight: 700;
+            }
+
+            & svg[data-variant="stroke"] {
+                fill: none;
+                stroke: $color-primary-green;
+            }
+        }
+
+        &--active {
+            background: $color-primary-white;
+            position: relative;
+            color: $color-primary-green;
+            font-weight: 700;
+
+            & svg,
+            span {
+                fill: $color-primary-green;
+                color: $color-primary-green;
+            }
+
+            & svg[data-variant="stroke"] {
+                fill: none;
+                stroke: $color-primary-green;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 100%;
+                background: $color-primary-green;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__link-plug {
+        width: 12px;
+    }
+
+    &__link-icon {
+        fill: $color-secondary-727272;
+        transition: fill .3s;
+    }
+
+    &__link-icon[data-variant="stroke"] {
+        fill: none;
+        stroke: $color-secondary-727272;
+        transition: fill .3s;
+    }
+
+    &__link-text {
+        color: $color-secondary-727272;
+        transition: color .3s;
+    }
+
+    &__decor-line {
+        margin: 0 calc(0px - $aside-account-indent);
+        border: none;
+        height: 0.3px;
+        background: rgba($color-primary-green, 0.5);
+    }
+
+    &__logout {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__logout-icon {
+        fill: none;
+        stroke: $color-primary-green;
+    }
+
+    &__logout-text {
+        color: $color-primary-green;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    &__mobile-btn-close {
+        position: absolute;
+        display: block;
+        top: 18px;
+        right: 18px;
+
+        @media screen and (min-width: $bp-tablet) {
+            display: none;
+        }
+    }
+
+    &__mobile-label {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-primary-green;
+        box-shadow: 0px 6px 20px 0px rgba($color-form, 0.6);
+        padding: 10px;
+        border-radius: 12px;
+
+        & svg {
+            fill: $color-primary-green;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            display: none;
+        }
+    }
+}

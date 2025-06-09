@@ -24,7 +24,6 @@
 @import './components/counter';
 @import './components/rating-stars';
 @import './components/product-page/product-tabs/product-tabs';
-@import './components/cart-page/cart-page';
 @import './components/image-product';
 
 @import './layouts/container';
@@ -35,3 +34,5 @@
 
 // pages/
 @import './components/product-page/product-page';
+@import './components/cart-page/cart-page';
+@import './components/account-page/account-page.scss';
